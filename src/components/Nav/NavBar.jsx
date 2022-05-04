@@ -1,7 +1,9 @@
-import '../components/NavBar.css'
+import logo from "../../assets/logo_AllIn.jpg"
 import 'bootstrap/dist/css/bootstrap.css'
-import '/logo_AllIn.jpg'
-import shop_icon from'/shop_icon.svg'
+import './NavBar.css'
+import "../UI/CartWidget"
+import CartWidget from '../UI/CartWidget'
+
 
 function NavBar() {
     return (
@@ -9,7 +11,7 @@ function NavBar() {
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark sticky-xl-top sticky-lg-top">
             <div className="container-fluid">
                 <a className="navbar-brand" href="">
-                    <img src="logo_AllIn.jpg" alt="logo nav" className="logo__nav rounded-circle"/>
+                    <img src={logo} alt="logo nav" className="logo__nav rounded-circle"/>
                 </a>
                 <a className="navbar-brand navbar__brand--title" href="">ALL IN CALISTHENICS</a>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02"
@@ -30,10 +32,7 @@ function NavBar() {
                         <li className="nav-item">
                             <a className="nav-link px-3" href="">AVANZADOS</a>
                         </li>
-                        <li className="nav-item">
-                            <a className="nav-link px-3" href=""><img src={shop_icon} className="App-logo" alt="logo" /></a>
-                        </li>
-
+                        <CartWidget/>
                     </ul>
                 </div>
             </div>
