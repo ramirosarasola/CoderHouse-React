@@ -7,7 +7,7 @@ import CartWidget from '../UI/CartWidget'
 
 function NavBar() {
     return (
-        <div className="container-fluid p-0 position-fixed">
+        <div className="container-fluid p-0 position-relative">
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark sticky-xl-top sticky-lg-top">
             <div className="container-fluid">
                 <a className="navbar-brand" href="">
