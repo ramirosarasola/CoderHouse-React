@@ -1,10 +1,15 @@
 import React from "react";
 import ItemCount from "../Buttons/ItemCount";
-import "./Item.css";
-
+import swal from 'sweetalert';
+import "./Item.css"
 const Item = ({ title, img, price, id, stockProduct, month, discount,  }) => {
     const onAdd = (quantity) => {
-        alert(`Has adquirido ${quantity} planes!!`);
+        swal({
+            title: "Felicitaciones!",
+            text: `Has adquirido ${quantity} planes!!`,
+            icon: "success",
+            button: "VOVLER",
+        });
     };
 
     return (
