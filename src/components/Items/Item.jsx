@@ -1,17 +1,20 @@
-import "./ItemCard.css";
+import React from "react";
 import ItemCount from "../Buttons/ItemCount";
+import "./Item.css";
 
-
-
-export default function ItemCard({title='Begginer', stockProduct=10, price='$' + 1900, discount='', month=""}){
+const Item = ({ title, img, price, id, stockProduct, month, discount,  }) => {
+    const onAdd = (quantity) => {
+        alert(`Has adquirido ${quantity} planes!!`);
+    };
 
     return (
         <div className="card">
         <p className="title">{title}</p>
         <div className="pricecontainer">
+            <img className="card__backgrond--img" src={img}/>
             <p className="price">{price}</p>
             <p className="pricedescriptor">{month}/month</p>
-            <p className="stock">{stockProduct}</p>
+            <p className="stock">{"stock disponible: " + stockProduct}</p>
         </div>
         <p className="includes">This Plan Includes:</p>
         <ul className="benefitlist">
@@ -20,9 +23,11 @@ export default function ItemCard({title='Begginer', stockProduct=10, price='$' +
         </ul>
         <div className="btncontainer">
             <div className="btnCounter">
-                <ItemCount/>
+                <ItemCount stockProduct={stockProduct} onAdd={onAdd} initial={1} />
             </div>
         </div>
         </div>
     );
-}
+};
+
+export default Item;

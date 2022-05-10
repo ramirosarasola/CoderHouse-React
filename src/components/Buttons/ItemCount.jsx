@@ -1,43 +1,30 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import "./ItemCount.css";
-//import ItemCard from "../ItemCard/ItemCard";
 
+const ItemCount = ({ initial, stockProduct, onAdd }) => {
+  //hook de estado
+    const [quantity, setQuantity] = useState(initial);
 
-export default function ItemCount() {
-    let stock = 10;
-    const [count, setCount] = useState(0);
+    const addProduct = (num) => {
+        setQuantity(quantity + num);
+    };
 
     return (
-        <div className="btnCountContainer">
-        <p className="counter">{count}</p>
-        <div className="btns">
-            <button className="btnAdd"
-            onClick={() => {
-                if (count < stock) {
-                setCount(count + 1);
-                } else {
-                alert("No hay stock suficiente");
-                }
-            }}
-            >
-            +
+        <div className="count-container">
+        <div className="count-container__contador">
+            <button className="count-container__button" onClick={() => addProduct(-1)} disabled={quantity === initial ? true : null}>-
             </button>
-            <button className="btnAddToCart">Add to Cart</button>
-            <button
-            className="btnRest"
-            onClick={() => {
-                if (count == 0) {
-                alert("no puede ser menos de 0");
-                } else {
-                setCount(count - 1);
-                }
-            }}
-            >
-            -
+
+            <span className="count-container__quantity">{quantity}</span>
+
+            <button className="count-container__button" onClick={() => addProduct(+1)} disabled={quantity === stockProduct ? true : null}>+
             </button>
-            
         </div>
+
+        <button className="button-primary" onClick={() => onAdd(quantity)} disabled={stockProduct === 0 ? true : null}> Add </button>
         </div>
     );
-}
+};
+
+export default ItemCount;

@@ -1,0 +1,28 @@
+export const productList = [{
+        title: 'Entrenar en Casa',
+        price: 2500,
+        img: 'https://res.cloudinary.com/thenx-production/image/upload//v1635265281/programs/79/1635265252208.jpg',
+        stockProduct: 10,
+        discount:'discount %' + 5,
+        month:4,
+        id: 1,
+    },
+    {
+        title: 'Introduccion Calistenia',
+        price: 3000,
+        img: 'https://res.cloudinary.com/thenx-production/image/upload//v1559250020/programs/46/1559249983.jpg',
+        stockProduct: 10,
+        discount:'discount %' +10,
+        month:8,
+        id: 2,
+    },
+    {
+        title: 'Programa Personalizado',
+        price: 5000,
+        img: 'https://res.cloudinary.com/thenx-production/image/upload//v1558975698/programs/48/1558975688.jpg',
+        stockProduct: 5,
+        discount:'discount %' +15,
+        month:12,
+        id: 3,
+    },
+];
