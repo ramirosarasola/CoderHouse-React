@@ -3,7 +3,6 @@ import "bootstrap/dist/css/bootstrap.css";
 import "./ItemCount.css";
 
 const ItemCount = ({ initial, stockProduct, onAdd }) => {
-  //hook de estado
     const [quantity, setQuantity] = useState(initial);
 
     const addProduct = (num) => {

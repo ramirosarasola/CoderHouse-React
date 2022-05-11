@@ -56,7 +56,12 @@
     text-transform: none;
     transition: all 0.3s ease-in-out;
     user-select: none;
-    font-size: 13px;
+    font-size: 10px;
+    align-items: center;
+    justify-content: center;
+    
+    width: 100px;
+    height: 50px;
     }
 
     .fancy::before {
@@ -66,7 +71,7 @@
     background: black;
     top: 50%;
     left: 1.5em;
-    position: absolute;
+    /*position: absolute;*/
     transform: translateY(-50%);
     transform-origin: center;
     transition: background 0.3s linear, width 0.3s linear;
@@ -74,45 +79,16 @@
 
     .fancy .text {
     font-size: 1.125em;
-    line-height: 1.33333em;
-    padding-left: 2em;
+    line-height: 14px;
     display: block;
-    text-align: left;
+    text-align: center;
     transition: all 0.3s ease-in-out;
     text-transform: uppercase;
     text-decoration: none;
     color: black;
     }
 
-    .fancy .top-key {
-    height: 2px;
-    width: 1.5625rem;
-    top: -2px;
-    left: 0.625rem;
-    position: absolute;
-    background: #e8e8e8;
-    transition: width 0.5s ease-out, left 0.3s ease-out;
-    }
-
-    .fancy .bottom-key-1 {
-    height: 2px;
-    width: 1.5625rem;
-    right: 1.875rem;
-    bottom: -2px;
-    position: absolute;
-    background: #e8e8e8;
-    transition: width 0.5s ease-out, right 0.3s ease-out;
-    }
-
-    .fancy .bottom-key-2 {
-    height: 2px;
-    width: 0.625rem;
-    right: 0.625rem;
-    bottom: -2px;
-    position: absolute;
-    background: #e8e8e8;
-    transition: width 0.5s ease-out, right 0.3s ease-out;
-    }
+    
 
     .fancy:hover {
     color: white;
@@ -126,11 +102,10 @@
 
     .fancy:hover .text {
     color: white;
-    padding-left: 1.5em;
+    padding-left:;
     }
 
-    .fancy:hover .top-key {
-    left: -2px;
+    .fancy:hover .top-key {;
     width: 0px;
     }
 
